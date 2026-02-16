@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+}
+
+/* NAV */
+nav{
+    background: saddlebrown;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.nav-derecha{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-ul{
+    display: flex;
+    color: white;
+    gap: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logo-texto{
+    color: white;
+}
+
+/* ASIDE */
+aside{
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.select{
+    width: 50%;
+    text-align: center;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.main-title{
+    padding: 20px 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+.card-img{
+    width: 300px;
+}
+
+.card-nombre-libro{
+    font-weight: 500;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.card-precio-unitario-texto{
+    border-top: 1px solid rgb(206, 206, 206);
+    margin: 0 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.card-precio{
+    font-weight: 200;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.cantidad-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-top: 1px solid rgb(206, 206, 206);
+    margin: 0 10px;
+}
+
+.boton-mas{
+    width: 30%;
+}
+
+.boton-menos{
+    width: 30%;
+}
+
+.total-pagar{
+    font-weight: 500;
+}
+
+.total-pagar-container{
+    width: 300px;
+    border: 1px solid rgb(153, 153, 153);
+    padding: 20px 20px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer{
+    background: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}

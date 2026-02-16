@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homo Desertum</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <img class="logo" src="assets/img/Logo Homo desertum blanco.png" alt="logo"><p class="logo-texto">Editorial Homo Desertum</p>
+        </div>
+        <div class="nav-derecha">
+            <ul class="nav-ul">
+                <li>Ofertas</li>
+                <li>Ultimos lanzamientos</li>
+                <li>Ingresar</li>
+            </ul>
+        </div>
+    </nav>
+    <aside>
+        <p>Ordenar por:</p>
+        <select class="select" name="" id="">
+            <option value="">Precio</option>
+            <option value="">Alfabético</option>
+        </select>
+    </aside>
+    <main>
+        <h2 class="main-title">Últimos Lanzamientos</h2>
+        <div class="card">
+            <img class="card-img" src="assets/img/Versos que vienen del fin del mundo.png" alt="portada libro">
+            <p class="card-nombre-libro">Versos que vienen del fin del mundo</p>
+            <p class="card-precio-unitario-texto">Precio Unitario:</p>
+            <p class="card-precio">$10.000</p>
+            <div class="cantidad-container">
+                <p class="cantidad-texto">Cantidad:</p>
+                <p class="cantidad-numero">0</p>
+                
+                <button class="boton-mas" onclick="
+                total = document.querySelector('.total-pagar');
+                precio = document.querySelector('.card-precio');
+                cantidadSpan = document.querySelector('.cantidad-numero');
+
+                precioNumero = Number(precio.innerHTML.replace('$','').replace('.',''));
+                cantidadActual = Number(cantidadSpan.innerHTML);
+
+                cantidadActual = cantidadActual + 1;
+                cantidadSpan.innerHTML = cantidadActual;
+
+                nuevoTotal = cantidadActual * precioNumero;
+                total.innerHTML = '$' + nuevoTotal.toLocaleString('es-CL');
+
+                ">+</button>
+
+                <button class="boton-menos" onclick="
+                total = document.querySelector('.total-pagar');
+                precio = document.querySelector('.card-precio');
+                cantidadSpan = document.querySelector('.cantidad-numero');
+
+                precioNumero = Number(precio.innerHTML.replace('$','').replace('.',''));
+                cantidadActual = Number(cantidadSpan.innerHTML);
+
+                if(cantidadActual > 0){
+                    cantidadActual = cantidadActual - 1;
+                }
+                cantidadSpan.innerHTML = cantidadActual;
+
+                nuevoTotal = cantidadActual * precioNumero;
+                total.innerHTML = '$' + nuevoTotal.toLocaleString('es-CL');
+                ">-</button>
+            </div>
+        </div>
+        <div class="total-pagar-container">
+            <p>Total a Pagar: </p>
+            <p class="total-pagar"></p>
+        </div>
+    </main>
+    <footer>
+        Derechos reservados - 2026
+    </footer>
+</body>
+</html>
